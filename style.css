@@ -1,0 +1,69 @@
+/* ===============================
+   Part 1: CSS3 Transitions & Animations
+   =============================== */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 40px;
+  background: #f9f9f9;
+}
+
+h1 {
+  color: #222;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Button hover transition */
+#hoverBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#hoverBtn:hover {
+  background: #3700b3;
+  transform: scale(1.1);
+}
+
+/* Animated box */
+.box {
+  width: 120px;
+  height: 120px;
+  background: tomato;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+/* Keyframes with transforms + color change */
+@keyframes slideAndFade {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+    background: tomato;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+    background: gold;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    background: seagreen;
+  }
+}
+
+/* Active animation class (triggered by JS) */
+.animate {
+  animation: slideAndFade 2s ease-in-out forwards;
+}
